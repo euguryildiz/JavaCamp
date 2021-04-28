@@ -1,0 +1,14 @@
+package inheritance2;
+
+import com.sun.org.apache.bcel.internal.generic.NEW;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	 CustomerManager customerManager = NEW CustomerManager();
+	 customerManager.add(new DatabaseLogger());
+	}
+
+}

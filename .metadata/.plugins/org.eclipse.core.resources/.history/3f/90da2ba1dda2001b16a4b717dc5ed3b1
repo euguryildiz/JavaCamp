@@ -1,0 +1,40 @@
+package intro;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		//TODO Test
+		//camelCase 
+		//FIXME
+		
+		double LastCurValue = 7.15;
+		double CurrentCurValue = 7.95;
+		int counter = 0;
+		
+		String subeButonu = "Test111";
+		System.out.println(subeButonu);
+		System.out.println(LastCurValue);
+		
+		
+		if (LastCurValue > CurrentCurValue ) {
+			System.out.println("Kur düþümü");
+		}else if (LastCurValue < CurrentCurValue ) {
+			System.out.println("Kur artýþý");
+		}else {
+			System.out.println("Kur eþitliði");
+		}
+		
+		String[] Credit = {"Hýzlý Kredi", "Konut Kredisi", "Çifçi Kredisi"};
+		
+		for (var item : Credit) {
+			System.out.println(Credit[item]);
+
+		}
+		
+		
+	}
+
+}

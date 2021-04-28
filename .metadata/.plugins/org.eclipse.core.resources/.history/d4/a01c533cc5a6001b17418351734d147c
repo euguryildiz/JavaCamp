@@ -1,0 +1,13 @@
+package homework.model;
+
+public class Lesson {
+	
+	
+	public class Lesson(int id, int categoryId, String name) {
+		this
+	}
+	
+	int Id;
+	int CategoryId;
+	String Name;
+}

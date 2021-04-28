@@ -1,0 +1,14 @@
+package homework.model;
+
+public class Student {
+
+	
+	public Student(int id, String Name) {
+		
+	}
+	
+	int Id;
+	String Name;
+	String Surname;
+	String Email;
+}

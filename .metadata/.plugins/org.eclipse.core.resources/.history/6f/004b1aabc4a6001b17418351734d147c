@@ -1,0 +1,10 @@
+package homework.model;
+
+public class Lesson {
+	int Id;
+	int CategoryId;
+	String Name;
+	
+	
+
+}

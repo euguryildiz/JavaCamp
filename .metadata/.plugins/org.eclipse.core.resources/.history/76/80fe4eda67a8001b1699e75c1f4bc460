@@ -1,0 +1,7 @@
+package inheritance2;
+
+public class EMailLogger extends Logger {
+	public void log() {
+		
+	}
+}

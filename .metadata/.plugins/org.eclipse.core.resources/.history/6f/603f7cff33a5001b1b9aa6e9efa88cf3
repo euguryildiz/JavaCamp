@@ -1,0 +1,38 @@
+package oopIntro;
+
+import java.util.Iterator;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Product product1 = new Product();   // Referans oluþturma, intance
+		product1.id = 1;
+		product1.name = "Lenova";
+		product1.unitPrice=15;
+		product1.detail="Test";
+		
+		Product product2 = new Product();   // Referans oluþturma, intance
+		product2.id = 2;
+		product2.name = "HP";
+		product2.unitPrice=15;
+		product2.detail="Test";
+		
+		Product product3 = new Product();   // Referans oluþturma, intance
+		product3.id = 3;
+		product3.name = "Monster";
+		product3.unitPrice=15;
+		product3.detail="Test";
+		
+		Product[] products = {product1};
+		
+		for (Product product : products) {
+			System.out.println(product.name);
+		}
+		
+		System.out.println(products.length);
+
+		
+	}
+
+}

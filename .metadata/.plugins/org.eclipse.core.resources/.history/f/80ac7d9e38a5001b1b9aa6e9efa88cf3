@@ -1,0 +1,15 @@
+package oopIntro;
+
+public class Product {
+
+	
+	public Product() {  // constructor  Class oluþtuðunda olmasý istenilen kod bloðu yazýlýr
+ 		System.out.println("constructor oluþturuldu");
+	}
+	
+	int id;
+	String name;
+	double unitPrice;
+	String detail;
+	
+}

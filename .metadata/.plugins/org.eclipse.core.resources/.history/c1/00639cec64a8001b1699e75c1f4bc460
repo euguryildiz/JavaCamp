@@ -1,0 +1,25 @@
+package inheritance;
+
+import java.util.List;
+
+public class CustomerManager {
+	
+	public void add(Customer customer) {
+		
+        Object object = customer; //auto boxing: Integer.valueOf(a);
+        
+        Customer val = (Customer)object; //auto unboxing: ((Integer)object).intValue();
+ 
+        System.out.printf("val=%d%n", val);
+
+	}
+	
+	
+	//bulk insert
+	public void addMultiple(Customer[] customers) {
+		for (Customer customer : customers) {
+			this.add(customer);
+		}
+	}
+
+}

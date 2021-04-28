@@ -1,0 +1,16 @@
+package inheritance;
+
+public class CorporateCustomer extends Customer {
+	String companyName;
+	String taxNumber;
+	
+	public CorporateCustomer() {
+		
+	}
+	
+	public CorporateCustomer(String companyName, String taxNumber) {
+		super(id,customerNumber);
+		this.companyName = companyName;
+		this.taxNumber = taxNumber;
+	}
+}

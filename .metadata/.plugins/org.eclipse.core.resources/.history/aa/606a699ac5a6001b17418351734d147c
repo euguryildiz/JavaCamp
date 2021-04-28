@@ -1,0 +1,12 @@
+package homework.model;
+
+public class Category {
+	
+	public Category(int id, String Name) {
+		this.Id = id;
+		this.Name = name;
+	}
+	
+	int Id;
+	String Name;
+}

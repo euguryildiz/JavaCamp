@@ -1,0 +1,20 @@
+package oopIntro;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		
+		String[] products = {
+				"Lenovo V14",
+				"Casper C500",
+				"Monster Abra A5 V15.3.1"
+		};
+		String[] products = {
+				"Lenovo V14",
+				"Casper C500",
+				"Monster Abra A5 V15.3.1"
+		};
+	}
+
+}

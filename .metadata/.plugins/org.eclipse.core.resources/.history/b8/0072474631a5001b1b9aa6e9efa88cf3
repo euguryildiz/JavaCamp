@@ -1,0 +1,23 @@
+package oopIntro;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Product product1 = new Product();   // Referans oluþturma, intance
+
+		product1.id = 1;
+		product1.name = "Lenova";
+		product1.unitPrice=15;
+		product1.detail="Test";
+		
+		Product[] products = {product1};
+		
+		
+		
+		System.out.println(products.length);
+
+		
+	}
+
+}
