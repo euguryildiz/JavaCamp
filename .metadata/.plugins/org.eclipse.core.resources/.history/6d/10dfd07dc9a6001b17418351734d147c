@@ -1,8 +1,0 @@
-package homework.service;
-
-import com.sun.tools.javac.util.List;
-
-public class StudentService {
-	
-	List<Student> _student;
-}

@@ -1,9 +1,0 @@
-package inheritance2;
-
-public class CustomerManager {
-	public void add() {
-		System.out.println("Customer added");
-		LogManager databaseLogger = new DatabaseLogger();
-		databaseLogger.log();
-	}
-}
