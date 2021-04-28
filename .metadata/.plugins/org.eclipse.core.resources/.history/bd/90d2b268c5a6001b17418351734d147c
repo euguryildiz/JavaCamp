@@ -1,6 +1,0 @@
-package homework.model;
-
-public class Category {
-	int Id;
-	String Name;
-}
