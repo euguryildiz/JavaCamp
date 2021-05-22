@@ -6,6 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import JavaCamp.northwind.business.abstracts.ProductService;
+import JavaCamp.northwind.core.utilities.result.DataResult;
+import JavaCamp.northwind.core.utilities.result.Result;
+import JavaCamp.northwind.core.utilities.result.SuccessDataResult;
+import JavaCamp.northwind.core.utilities.result.SuccessResult;
 import JavaCamp.northwind.dataAccess.abstracts.ProductDao;
 import JavaCamp.northwind.entities.concretes.Product;
 
@@ -20,9 +24,14 @@ public class ProductManager implements ProductService {
 		this.productDao = productDao;
 	}
 	@Override
-	public List<Product> getAll() {
-		// TODO Auto-generated method stub
-		return this.productDao.findAll();
+	public DataResult<List<Product>> getAll() {
+		return new SuccessDataResult<List<Product>>(this.productDao.findAll(),"Data to List");
 	}
-
+	@Override
+	public Result add(Product product) {
+		this.productDao.save(product);
+		return new SuccessResult(true,"Product Added");
+	}
+	
+	
 }

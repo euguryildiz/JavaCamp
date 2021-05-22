@@ -3,15 +3,23 @@ package JavaCamp.northwind.entities.concretes;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Entity // Lombok ile getter ve setter otomatik oluşturma
+@AllArgsConstructor //Parametreli Constructor için lombok otomatik oluşturma
+@NoArgsConstructor // Parametresiz Constructor  için lombok otomatik oluşturma
 @Table(name="products") // Veritabanındaki tablo eşleştirmesi için kullanılır.
 public class Product {
 	
 		@Id
-		@GeneratedValue  //Otomatik olarak attırılması için kullanılır.
+		@GeneratedValue(strategy = GenerationType.IDENTITY)  //Otomatik olarak attırılması için kullanılır.
 		@Column(name="product_id") // Veritabanındaki alan karşılığı belirtmek için kullanılır.
 		private int id;
 		
@@ -29,67 +37,5 @@ public class Product {
 		
 		@Column(name="quantity_per_unit")
 		private String quantityPerUnit;
-		
-		public Product() {
-			
-		}
-		public Product(int id, int categoryId, String productName, double unitPrice, short unitsInStock, String quantityPerUnit) {
-			super();
-			this.id = id;
-			this.categoryId = categoryId;
-			this.productName = productName;
-			this.unitPrice = unitPrice;
-			this.unitsInStock = unitsInStock;
-			this.quantityPerUnit = quantityPerUnit;
-		}
-
-		public int getId() {
-			return id;
-		}
-
-		public void setId(int id) {
-			this.id = id;
-		}
-
-		public int getCategoryId() {
-			return categoryId;
-		}
-
-		public void setCategoryId(int categoryId) {
-			this.categoryId = categoryId;
-		}
-
-		public String getProductName() {
-			return productName;
-		}
-
-		public void setProductName(String productName) {
-			this.productName = productName;
-		}
-
-		public double getUnitPrice() {
-			return unitPrice;
-		}
-
-		public void setUnitPrice(double unitPrice) {
-			this.unitPrice = unitPrice;
-		}
-
-		public short getUnitsInStock() {
-			return unitsInStock;
-		}
-
-		public void setUnitsInStock(short unitsInStock) {
-			this.unitsInStock = unitsInStock;
-		}
-
-		public String getQuantityPerUnit() {
-			return quantityPerUnit;
-		}
-
-		public void setQuantityPerUnit(String quantityPerUnit) {
-			this.quantityPerUnit = quantityPerUnit;
-		}
-		
 
 }
