@@ -25,7 +25,7 @@ public class ProductManager implements ProductService {
 	}
 	@Override
 	public DataResult<List<Product>> getAll() {
-		return new SuccessDataResult<List<Product>>(this.productDao.findAll(),"Data to List");
+		return new SuccessDataResult<List<Product>>("Product List",this.productDao.findAll());
 	}
 	@Override
 	public Result add(Product product) {
