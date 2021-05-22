@@ -2,11 +2,11 @@ package JavaCamp.northwind.core.utilities.result;
 
 public class SuccessResult extends Result {
 
-	public SuccessResult(boolean success) {
+	public SuccessResult() {
 		super(true);
 	}
 	
-	public SuccessResult(boolean success,String message) {
+	public SuccessResult(String message) {
 		super(true,message);
 	}
 

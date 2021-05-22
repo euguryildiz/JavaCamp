@@ -30,7 +30,7 @@ public class ProductManager implements ProductService {
 	@Override
 	public Result add(Product product) {
 		this.productDao.save(product);
-		return new SuccessResult(true,"Product Added");
+		return new SuccessResult("Product Added");
 	}
 	
 	

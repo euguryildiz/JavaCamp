@@ -18,22 +18,22 @@ import JavaCamp.northwind.entities.concretes.Product;
 @RequestMapping("/api/products") // api istek karşılama url adresini belirtir
 public class ProductsController {
 	
-	private ProductService producutService;
+	private ProductService productService;
 	
 	@Autowired
 	public ProductsController(ProductService producutService) {
 		super();
-		this.producutService = producutService;
+		this.productService = producutService;
 	}
 
 	@GetMapping("/getall")
 	public DataResult<List<Product>> getAll() {
-		return this.producutService.getAll();
+		return this.productService.getAll();
 	}
 	
 	@PostMapping
 	public Result add(@RequestBody Product product) {
-		return this.producutService.add(product);
+		return this.productService.add(product);
 	}
 	
 }
