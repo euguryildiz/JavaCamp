@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import JavaCamp.northwind.business.abstracts.ProductService;
@@ -31,10 +32,42 @@ public class ProductsController {
 		return this.productService.getAll();
 	}
 	
+	@GetMapping("/getallByPage")
+	public DataResult<List<Product>> getAll(int pageNo, int pageSize) {
+		return this.productService.getAll(pageNo, pageSize);
+	}
+	
+	@GetMapping("/getallDesc")
+	public DataResult<List<Product>> getallDesc() {
+		return this.productService.getAllSorted();
+	}
+	
+	
 	@PostMapping
 	public Result add(@RequestBody Product product) {
 		return this.productService.add(product);
 	}
+	
+	@GetMapping("/getByProductName")
+	public DataResult<Product> getByProductName(@RequestParam String productName){
+		return this.productService.getByProductName(productName);
+	}
+	
+	@GetMapping("/getByProductNameAndCategory")
+	public DataResult<Product> getByProductNameAndCategoryId(@RequestParam("productName") String productName, @RequestParam("categoryId") int categoryId){
+		return this.productService.getByProductNameAndCategoryId(productName, categoryId);
+	}
+	
+	@GetMapping("/getByProductNameOrCategory")
+	public DataResult<List<Product>> getByProductNameOrCategoryId(@RequestParam("productName") String productName, @RequestParam("categoryId") int categoryId){
+		return this.productService.getByProductNameOrCategoryId(productName,categoryId);
+	}
+	
+	@GetMapping("/getByProductNameContains")
+	public DataResult<List<Product>> getByProductNameContains(@RequestParam("productName") String productName){
+		return this.productService.getByProductNameContains(productName);
+	}
+	
 	
 }
 
