@@ -14,6 +14,7 @@ import JavaCamp.northwind.business.abstracts.ProductService;
 import JavaCamp.northwind.core.utilities.result.DataResult;
 import JavaCamp.northwind.core.utilities.result.Result;
 import JavaCamp.northwind.entities.concretes.Product;
+import JavaCamp.northwind.entities.dtos.ProductWithCategoryDto;
 
 @RestController
 @RequestMapping("/api/products") // api istek karşılama url adresini belirtir
@@ -66,6 +67,12 @@ public class ProductsController {
 	@GetMapping("/getByProductNameContains")
 	public DataResult<List<Product>> getByProductNameContains(@RequestParam("productName") String productName){
 		return this.productService.getByProductNameContains(productName);
+	}
+	
+	@GetMapping("getProductWithCategoryDetail")
+	public DataResult<List<ProductWithCategoryDto>> getProductWithCategoryDetail()
+	{
+		return this.productService.getProductWithCategoryDetail();
 	}
 	
 	

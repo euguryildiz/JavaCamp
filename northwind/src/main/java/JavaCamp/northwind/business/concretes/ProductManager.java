@@ -16,6 +16,7 @@ import JavaCamp.northwind.core.utilities.result.SuccessDataResult;
 import JavaCamp.northwind.core.utilities.result.SuccessResult;
 import JavaCamp.northwind.dataAccess.abstracts.ProductDao;
 import JavaCamp.northwind.entities.concretes.Product;
+import JavaCamp.northwind.entities.dtos.ProductWithCategoryDto;
 
 @Service
 public class ProductManager implements ProductService {
@@ -73,6 +74,10 @@ public class ProductManager implements ProductService {
 	@Override
 	public DataResult<List<Product>> getByNameAndCategoryId(String productName, int categoryId) {
 		return new SuccessDataResult<List<Product>>("Data list",this.productDao.getByNameAndCategory_CategoryId(productName, categoryId));
+	}
+	@Override
+	public DataResult<List<ProductWithCategoryDto>> getProductWithCategoryDetail() {
+		return new SuccessDataResult<List<ProductWithCategoryDto>>("Product with category data list",this.productDao.getProductWithCategoryDetail());
 	}
 
 	
