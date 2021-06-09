@@ -18,6 +18,7 @@ import JavaCamp.northwind.entities.dtos.ProductWithCategoryDto;
 
 @RestController
 @RequestMapping("/api/products") // api istek karşılama url adresini belirtir
+
 public class ProductsController {
 	
 	private ProductService productService;
@@ -57,6 +58,11 @@ public class ProductsController {
 	@GetMapping("/getByProductNameAndCategory")
 	public DataResult<Product> getByProductNameAndCategoryId(@RequestParam("productName") String productName, @RequestParam("categoryId") int categoryId){
 		return this.productService.getByProductNameAndCategoryId(productName, categoryId);
+	}
+	
+	@GetMapping("/getById")
+	public DataResult<Product> getById(@RequestParam("id") int id){
+		return this.productService.getById(id);
 	}
 	
 	@GetMapping("/getByProductNameOrCategory")
